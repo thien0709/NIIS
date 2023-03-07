@@ -1,0 +1,212 @@
+@font-face {
+  font-family: Heypatrick;
+  src: url(./font/font/Heypatrick.ttf);
+}
+@font-face {
+  font-family: CourierNew;
+  src: url(./font/font/CourierNew.ttf);
+}
+@font-face {
+  font-family: TwCenMT;
+  src: url(./font/font/TwCenMT.TTF);
+}
+:root{
+  --gray: #23272E;
+  --white: #D1D1D1;
+  --orange:#f05123;
+  --blue:#03e9f4;
+  --blue1:#93BFCF;
+  --pink: #FBC5C5;
+  --green:#00ff55;
+  --red: #E96479;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  font-size: 20px;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+}
+/*Navbar*/
+nav{
+  display: flex;
+  width: 100vw;
+  height: 3rem;
+  background-color: var(--gray);
+  position: relative;
+}
+.relative {
+  display: flex;
+  font-family: TwCenMT;
+  font-size: 1.5rem;
+  margin-left: 5rem;
+  line-height: 3rem;
+  width: 30%;
+  justify-content: space-around;
+}
+.relative a{
+  color: var(--white);
+  padding: 0 2rem;
+}
+.relative a:hover{
+  color: var(--white);
+  text-shadow: 0 0 5px var(--blue),
+  0 0 25px var(--blue),
+  0 0 75px var(--blue),
+  0 0 100px var(--blue);
+
+}
+.logo img{
+  width: auto;
+  height: 3rem;
+  padding: 0 2rem;
+}
+.switch-toggle{
+  display: flex;
+  width: 10%;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--orange);
+  margin-left: 20rem;
+}
+.switch-toggle a:hover{
+  color: var(--white);
+  text-shadow: 0 0 5px var(--blue),
+  0 0 25px var(--blue),
+  0 0 50px var(--blue),
+  0 0 75px var(--blue),
+  0 0 100px var(--blue);
+}
+.switch{
+  width: 4rem;
+  height: 2rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.switch .button{
+  background-color: var(--orange);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  margin-left: 0.1rem;
+}
+.switch.active{
+  background-color: var(--green);
+}
+.switch.active .button{
+  transform: translateX(2rem);
+  transition: cubic-bezier(.5,-.75,.7,2) 0.3s;
+}
+.action{
+  display: flex;
+  color: var(--orange);
+  margin-left: 5rem;
+  width: 5%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.action .bell{
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.action .bell li:hover{
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--blue1)
+}
+.action .bell i{
+  cursor: pointer;
+}
+.action .bell:hover i,.action .more.active i,.action .more:hover i{
+  color: var(--white);
+  text-shadow: 0 0 5px var(--blue),
+  0 0 25px var(--blue),
+  0 0 50px var(--blue),
+  0 0 75px var(--blue),
+  0 0 100px var(--blue);
+}
+.action .bell:hover ul{
+  display: block;
+}
+.action .bell ul{
+  display: none;
+  background-color: var(--white);
+  box-shadow: 0.5px 0.5px var(--gray);
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  text-align: center;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  list-style-type: none;
+  top: 3rem;
+  right: 0;
+  padding: 1rem;
+
+}
+.action .bell li,.action .more li{
+  padding: 0.3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: var(--gray);
+  text-shadow: 0 0 7px var(--pink), 0 0 10px var(--pink), 0 0 21px var(--pink);
+}
+.action .more.active ul{
+
+  display: block;
+}
+.action .more{
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.action .more ul{
+  display: none ;
+  background-color: var(--white);
+  box-shadow: 2px 2px var(--blue1);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  list-style-type: none;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  padding: 1rem 2rem;
+}
+/*Slider*/
+#slider {
+  display: flex;
+  width: 80%;
+  height: 50vh;
+  margin: 2% 10% ;
+}
+#slider .picture{
+  background-image: url(https://i.pinimg.com/originals/24/27/3e/24273eab9c3fed80a73e331275b57206.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80%;  
+  border-radius: 2rem;
+}
+#slider .scroll button{
+  border: 0;
+  background: none;
+
+}
